@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="" data-ng-app="fbApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/vendor/angular.min.js"></script>
+  <script src="js/fbapp.js"></script>
+  <script src="js/fbController.js"></script>
+  <title ng-bind="username"></title>
+</head>
+
+<body>
+  <div data-ng-controller="fbController">
+    Username: <input type="text" data-ng-model-options="{ debounce : 1000}" data-ng-model="username" />
+    <hr />
+    <img data-ng-src="https://graph.facebook.com/{{ username }}/picture?type=normal"/>
+  </div>
+</body>
+</html>
