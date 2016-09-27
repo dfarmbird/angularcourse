@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="" data-ng-app="myApp">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,12 @@
 </head>
 
 <body>
-
+  <article data-ng-controller='FormController'>
+    <select id="selCountry" data-ng-model="chosenCountry" data-ng-options="country as country.name for country in countries">
+    </select>
+    <hr />
+    Country Code: <p>{{ chosenCountry.code }}</p>
+  </article>
 </body>
 <script src="js/es6app.js"></script>
 </html>
